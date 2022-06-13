@@ -3,41 +3,22 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main() 
-{
-	int sbh, sbn, dlt, dth, dbtl;
-	float pt_so_bn;
-
-	printf("nhap vao sbn, sbh\n");
-	scanf("%d%d",&sbn,&sbh);
-	pt_so_bn = (sbn*100)/(sbn+sbh);
-	printf("pha tram so buoi nghi la: %.2f\n",pt_so_bn);
-	if(pt_so_bn >=25 )
+int main(int argc, char *argv[]) {
+	int n,i;
+	int dem=0;
+	printf("nhap vao so nguyen n \n");
+	scanf("%d",&n);
+	
+	for(i=2;i<sqrt(n);i++)
 	{
-		printf("Hoc lai\n");
+	
+	if(n%i==0)
+	dem=dem+1;
 }
-
+	if(dem==0)
+	printf("%d la so nguyen to",n);
 	else
-{
-	printf("nhap vao dlt,dth,dbtl\n");
-	scanf("%d%d%d", &dlt, &dth, &dbtl);
-	 if(dlt>=8)
-	 {
-	 	printf("PASS LT\n");
-	 }
-	else 
-	printf("fail LT\n");
-	if(dth>=6)
-	{
-		printf("pass TH\n");
-	}
-	else
-	printf("fail TH\n");
-	if(dbtl>=4){
-		printf("pass BTL\n");
-	}
-	else
-	printf("fail BTL\n");
-}
+	printf("%d la hop so",n);
+	
 	return 0;
 }
