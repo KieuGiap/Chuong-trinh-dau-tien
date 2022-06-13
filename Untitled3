@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	
+	int f(1)=1;
+	int f(2)=1;
+	int n;
+	printf("nhap vao n\n");
+	scanf("%d",n);
+	
+	if(i<=2)
+	return 1;
+	
+	
+	for(i=3,i<n,i++)
+	{
+		f(3)=f(1)+f(2);
+		f(1)=f(2);
+		f(2)=f(3);
+	}
+	printf("day fibonaci den %d la : %d",n,i);
+	return 0;
+	
+}
