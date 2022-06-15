@@ -22,6 +22,7 @@ void main(int argc, char *argv[]) {
 	printf("\n gia tri cao nhat nhap vao la %d",high);
 	for(i=0, total=0;i<10; i++){
 	total=total+ary[i];
+	}
 	printf("\n gia tri trung binh la %f",total/i);
-}
+
 }
