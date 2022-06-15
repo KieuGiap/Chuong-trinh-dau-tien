@@ -8,7 +8,7 @@ void main(int argc, char *argv[]) {
 	int i,total,high;
 	for(i=0;i<10;i++)
 	{
-		printf("nhap gia tri %d :",i+1);
+		printf("\nnhap gia tri %d :",i+1);
 		scanf("%d", &ary[i]);
 		}	
 	
@@ -19,8 +19,9 @@ void main(int argc, char *argv[]) {
 		high=ary[i];
 		
 	}
-	printf(" gia tri cao nhat nhap vao la %d",high);
-	for(i=0;total=0;i++)
+	printf("\n gia tri cao nhat nhap vao la %d",high);
+	for(i=0, total=0;i<10; i++){
 	total=total+ary[i];
-	printf("gia tri trung binh la %d",total/i);
+	printf("\n gia tri trung binh la %f",total/i);
+}
 }
