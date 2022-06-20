@@ -1,6 +1,6 @@
 [Project]
-FileName=vi du mang.dev
-Name=vi du mang
+FileName=hàm.dev
+Name=hàm
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=vi du mang.c
+FileName=hàm.c
 CompileCpp=0
 Folder=
 Compile=1
