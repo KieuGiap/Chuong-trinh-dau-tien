@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
 			}
 			
 	}
-		printf("ban co muon tiep tuc (Y/N) :)");
+		printf("ban co muon tiep tuc (Y/N) : ");
 		fflush (stdin);
 			scanf("%c",&ch);	
 }

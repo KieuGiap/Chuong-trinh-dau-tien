@@ -1,6 +1,6 @@
 [Project]
-FileName=tong-tich.dev
-Name=Project2
+FileName=ASM ATM.dev
+Name=ASM ATM
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=tongab.c
+FileName=ÁM ATM.c
 CompileCpp=0
 Folder=
 Compile=1
