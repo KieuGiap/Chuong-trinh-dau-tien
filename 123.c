@@ -1,104 +1,118 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int login(int a,int b)
+int login(int a, int b)
 {
-	if(a==123&&b==456)
-	printf("\n\n\t\t*** Chuc mung ban da dang nhap thanh cong ***");
+	if(a==123,b==456)
+	printf(" \n\n\t\t\a*** Chuc mung ban da dang nhap thanh cong  *** \n ");
 	return 0;
 }
+char menu()
+{
+	printf("\n\n\t\t1. Rut tien\t\t2. Chuyen tien\n\t\t3. Hien thi so su\t4. Thoat\n\n");
+}
 
-int sodu(){
+int sodu()
+{	
 	int sd;
-	sd=12300000;
+	sd=100000000;
 	return sd;
 }
 
-int ruttien(){
-	int c,sd,cl;
-	printf("Nhap vao so tien can rut : ");
-	scanf("%d", &c);
-	sd=sodu();	
-	if(c<sd&&c%50==0&&c<3000000){
-	printf("Ban da rut tien thanh cong so tien %d\n",c);
-	cl=sd-c;
-	printf("so du con lai la %d\n",cl);
-}
-	else if (c<sd&&c%50!=0)
-	printf("So tien ban can rut khong phai la boi cua 50, moi ban nhap lai \n");
-	else if(c<sd&&c>=3000000)
-	printf("So tien cua ban lon hon 3M, moi ban nhap lai \n");	
-	else
-	printf("Tai khoan cua ban khong du tien \n");	
-}
-
-char menu()
+int ruttien()
 {
-	printf("\n\n\n\t\t1. Rut tien\t\t\t2. Chuyen khoan\n\t\t3. Hien thi so du\t\t4. Thoat\n\n");
+	int c,sd,cl;
+	sd=sodu();
+	
+	printf("Nhap vao so tien can rut : ");
+	scanf("%d",&c);
+	if(c<sd && c%50==0 && c<3000000)
+	{
+		printf("Ban da rut thanh cong %d VND\n",c);
+		cl=sd-c;
+		printf("So du hien tai la %d\n",cl);
+	}
+	else if(c<sd && c%50!=0)
+	printf("So tien rut khong phai la boi cua 50, moi ban nhap lai\n");
+	else if(c<sd && c>3000000)
+	printf("So tien ban rut vuot qua 3M, moi ban nhap lai \n");
+	else
+	printf("So tien can rut vuot qua so du, moi ban nhap lai \n");
 }
 
-int chuyentien(){
-	int sd,stc,stk;
+int chuyentien()
+{
+	int stc, stk, cl,sd;
 	sd=sodu();
-	printf("Nhap vao so tien can chuyen:");
-	scanf("%d",&stc);
-	printf("nhap vao stk can chuyen:");
-	scanf("%d",&stk);
+	
+
 	if(stc<sd)
 	{
-	printf("\nBan da chuyen so tien %d cho tai khoan %d",stc,stk);
-	printf(" \nSo su hien tai cua ban la %d",sd-stc);
+		printf("Nhap vao so tien can chuyen :");
+	scanf("%d",&stc);
+	printf("\nNhap vao so tai khoan can chuyen:");
+	scanf("%d",&stk);
+	printf("Ban da chuyen thanh cong %d VND cho so tai khoan %d\n",stc,stk);
+	
+	printf("So du hien tai cua ban la %d\n",cl);
+	
 }
-	else 
-	printf("So tien chuyen lon hon so du hien tai \n");
+	else
+	printf("so tien khong du de chuyen\n");
 }
 
-int main(int argc, char *argv[]) {
-	int log,a,b,mn,ch,rt,ct,sd;
-	char check, check1;
-	printf("\t\t\t*** Chao mung ban den voi ATM ***\n");
+int main()
+{
+	int a,b,log,rt,ct,sd;
+	char mn,ch,check;
 	do{
-	printf("\nMoi ban nhap vao user cua the : ");
+	printf("\t\t\ *** Chao mung ban den voi ATM *** \n\n");
+	printf("Nhap vao user cua tai khoan : ");
 	scanf("%d",&a);
-	printf("\nMoi ban nhap vao password cua the : ");
+	printf("Nhap vao pass cua tai khoan : ");
 	scanf("%d",&b);
 	log=login(a,b);
-	if(a==123&&b==456){
-	do
+	if(a==123&&b==456)
 	{
-	
-	mn=menu();
-	printf("Nhap vao lua chon cua ban : ");
-	scanf("%d",&ch);
-	switch(ch)
-	{
-		case 1: 
-		rt=ruttien();
-		break;
-		case 2:
+		do
+		{
+		
+		int yc;
+		char mn;
+		mn=menu();
+		printf("Moi ban lua chon yeu cau : ");
+		scanf("%d",&yc);
+		switch(yc)
+		{
+			case 1:
+				rt=ruttien();
+				break;
+			
+			case 2:
 			ct=chuyentien();
 			break;
-		case 3:
-			sd=sodu();
-			printf("So du cua ban la %d",sd);
-			break;
-		case 4:
-			return 0;
+			
+			case 3:
+				sd=sodu();
+				printf("So du cua ban la %d VND\n",sd);
+				break;
+			case 4:
+				return 0;
+				break;
+			}
+		printf("Ban co muon tiep tuc khong (Y/N) : ");
+		fflush(stdin);
+		scanf("%c",&ch);
 	}
-	printf("Ban co muon tiep tuc khong (Y/N) : ");
-	fflush (stdin);
-	scanf("%c",&check);
+		while(ch=='Y'||ch=='y');
 }
-while (check=='y'||check=='Y');
+	else
+	{
+		printf("\nBan da nhap sai user hoac pass , moi ban nhap lai\n");
+	}
+}	
+		while(a!=123||b!=456);
+	
 }
-else
-{
 
-	printf("\nBan da dang nhap sai user hoac passwword, moi ban dang nhap lai");
-}
-}
-	while (a!=123&&b!=456);
-	return 0;
-}
+	
