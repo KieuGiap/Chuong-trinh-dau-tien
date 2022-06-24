@@ -6,11 +6,10 @@
 void main()
  {
 	char name[20];
-
 	puts("nhap vao ten\n");
 	get(name);
 	
 	puts(" hi there \n");
-	get(name);
+	puts(name);
 	getch();
 }

@@ -1,6 +1,6 @@
 [Project]
-FileName=vidu1 bai 17.dev
-Name=vidu1 bai 17
+FileName=thanh tien.dev
+Name=thanh tien
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=vidu1 bai 17.c
+FileName=than tien.c
 CompileCpp=0
 Folder=
 Compile=1
