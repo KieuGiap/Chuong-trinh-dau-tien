@@ -1,28 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define LENGTH 5
 
 
-void nhap(int arr[])
+
+void nhap(int arr[4][4])
 {
-	int i;
-	for(i=0;i<LENGTH;i++)
+	int i,j;
+	for(i=0;i<4;i++)
 	{
-		scanf("%5d",&arr[i]);
-		
+		for(j=0;j<4;j++)
+		{
+		scanf("%5d",&arr[i][j]);	
 	}
 }
+}
 
-void hienthi(int arr[])
+void hienthi(int arr[4][4])
 {
-	int i,sum=0;
-	for(i=0;i<LENGTH;i++)
+	int i,j,sum=0;
+	for(i=0;i<4;i++)
 	{
-		printf("%5d",arr[i]);
-		sum+=arr[i];
+		for(j=0;j<4;j++)
+		{
+		
+		printf("%5d",arr[i][j]);
+		sum+=arr[i][j];
+		}
 	}
-	printf("\ntong cac phan tu là %d",sum);	
+	printf("\ntong cac phan tu la %d",sum);	
 		
 }
 
@@ -30,7 +36,7 @@ void hienthi(int arr[])
 
 int main(int argc, char *argv[]) {
 	
-	int arr[LENGTH];
+	int arr[4][4];
 	nhap(arr);
 	hienthi(arr);
 	
