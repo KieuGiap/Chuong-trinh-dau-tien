@@ -6,8 +6,8 @@
 
 int nhap(int arr[4])
 {
-	int i,sum=0;
-	float avg;
+	int i;
+
 	for(i=0;i<4;i++)
 	{
 		printf("Nhap phan tu thu a[%d] la :",i);
