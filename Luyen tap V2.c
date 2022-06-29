@@ -6,51 +6,12 @@
 
 int nhap(int arr[4])
 {
-	int i,sum=0;
-	float avg;
+	int i;
 	for(i=0;i<4;i++)
 	{
-		printf("Nhap phan tu thu a[%d] la :",i);
+		printf("nhap vao phan tu thu a[%d]",i);
 		scanf("%d",&arr[i]);
-	
-		}
 	}
-	
-int tong(int arr[4])
-{
-	int i,sum=0;
-	for(i=0;i<4;i++)
-	{
-		sum+=arr[i];
-	}
-	return sum;
-}
-
-	int trungbinh(int arr[])
-	{
-		int i,sum;
-		float tb;
-		for(i=0;i<4;i++){
-			sum+=arr[i];
-			tb=sum/i;
-		}
-		return tb;
-	}
-
-int max(int arr[4])
-{
-	int i,index,max=arr[0];
-	for(i=0;i<4;i++)
-	{
-		if(max<arr[i])
-		{
-		
-		max=arr[i];
-		index=i;
-		}
-	}
-	
-	return index;
 }
 
 int min(int arr[])
@@ -61,10 +22,9 @@ int min(int arr[])
 		if(arr[i]<min)
 		{	
 		min=arr[i];
-		index=i;
 		}
 	}
-	return index;
+	return min;
 }
 
 

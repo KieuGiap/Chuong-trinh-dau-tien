@@ -1,6 +1,6 @@
 [Project]
-FileName=Project6.dev
-Name=Project6
+FileName=Project3.dev
+Name=Project3
 Type=1
 Ver=2
 ObjFiles=
@@ -51,17 +51,8 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=bi sai.c
+FileName=main.c
 CompileCpp=0
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit2]
-FileName=Untitled3
 Folder=
 Compile=1
 Link=1
